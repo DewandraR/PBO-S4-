@@ -1,0 +1,101 @@
+1. lustrasi alur kerja program Waktu:
+	1.	Program dimulai dengan memanggil method main pada class Waktu.
+	2.	Di dalam method main, dibuat dua objek dari class Waktu dengan nilai argumen masing-masing adalah jam, menit, dan detik.
+	3.	Kemudian, method perbedaan dipanggil dengan dua objek Waktu sebagai argumen, dan hasilnya disimpan dalam objek selisih.
+	4.	Pada method perbedaan, objek Waktu selisih dibuat dengan nilai awal jam, menit, dan detik = 0.
+	5.	Jika detik pada objek mulai lebih besar dari detik pada objek selesai, maka detik pada objek selesai dikurangi 60 dan menit pada objek selesai dikurangi 1.
+	6.	Selisih detik dihitung dengan mengurangi detik pada objek mulai dari detik pada objek selesai.
+	7.	Jika menit pada objek mulai lebih besar dari menit pada objek selesai, maka menit pada objek selesai dikurangi 60 dan jam pada objek selesai dikurangi 1.
+	8.	Selisih menit dihitung dengan mengurangi menit pada objek mulai dari menit pada objek selesai.
+	9.	Selisih jam dihitung dengan mengurangi jam pada objek mulai dari jam pada objek selesai.
+	10.	Hasil selisih waktu disimpan dalam objek selisih.
+	11.	Pada method main, hasil selisih waktu dicetak ke layar dengan format yang sesuai menggunakan printf.
+
+Ilustrasi alur kerja program dapat dijelaskan dengan diagram alir sebagai berikut:
+main() --> membuat objek Waktu mulai dengan nilai (8, 12, 15) membuat objek Waktu selesai dengan nilai (12, 34, 55) memanggil method perbedaan(mulai, selesai) menyimpan hasil perbedaan dalam objek selisih mencetak hasil selisih waktu ke layar
+perbedaan() --> membuat objek Waktu selisih dengan nilai (0, 0, 0) jika detik pada mulai > detik pada selesai: kurangi menit pada selesai dengan 1 tambahkan 60 ke detik pada selesai hitung selisih detik jika menit pada mulai > menit pada selesai: kurangi jam pada selesai dengan 1 tambahkan 60 ke menit pada selesai hitung selisih menit hitung selisih jam kembalikan objek selisih
+
+
+2. Berikut adalah ilustrasi dari alur kerja pemanggilan class, method, dan variabel dalam program Complex:
+	1.	Pada method main, kita membuat tiga objek Complex, yaitu n1, n2, dan temp dengan nilai masing-masing (2.3, 4.5), (3.4, 5.0), dan (0.0, 0.0).
+	2.	Kemudian, kita memanggil method add(n1, n2) dengan argumen n1 dan n2 sebagai input.
+	3.	Pada method add, kita membuat objek Complex temp dengan nilai (0.0, 0.0).
+	4.	Selanjutnya, kita menghitung nilai temp.real dan temp.imag dengan menjumlahkan n1.real dan n2.real, serta n1.imag dan n2.imag.
+	5.	Setelah selesai menghitung, kita mengembalikan nilai temp ke method main.
+	6.	Pada method main, nilai yang dikembalikan oleh method add disimpan pada variabel temp.
+	7.	Terakhir, kita mencetak hasil penjumlahan dua bilangan kompleks dengan menggunakan System.out.printf().
+
+Berikut adalah ilustrasi alur kerja program Complex:
+
+                +----------------+
+                |     Complex    |
+                +----------------+
+                | - real: double |
+                | - imag: double |
+                +----------------+
+                        ^
+                        |
+                        | Object n1, n2, temp
+                        |
+                        |
+              +---------------------+
+              |       Complex       |
+              +---------------------+
+              | + add(n1: Complex,  |
+              |      n2: Complex):  |
+              |      Complex        |
+              +---------------------+
+                        ^
+                        |
+                        | Method call
+                        |
+                        |
+              +---------------------+
+              |       Complex       |
+              +---------------------+
+              | - temp: Complex     |
+              +---------------------+
+                        ^
+                        |
+                        | Variable assignment
+                        |
+                        |
+              +---------------------+
+              |       Complex       |
+              +---------------------+
+              | + add(n1: Complex,  |
+              |      n2: Complex):  |
+              |      Complex        |
+              +---------------------+
+                        ^
+                        |
+                        | Return object
+                        |
+                        |
+              +---------------------+
+              |       Complex       |
+              +---------------------+
+              | - temp: Complex     |
+              +---------------------+
+                        ^
+                        |
+                        | Object assignment
+                        |
+                        |
+              +---------------------+
+              |       Complex       |
+              +---------------------+
+              | - n1: Complex       |
+              | - n2: Complex       |
+              | - temp: Complex     |
+              +---------------------+
+                        ^
+                        |
+                        | Print result
+                        |
+                        |
+              +----------------------+
+              |       System.out      |
+              +----------------------+
+              | + printf(format, ...) |
+              +----------------------+
